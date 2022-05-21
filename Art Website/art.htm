@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Beyond the Arts</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="Styles.css">
+	<link href="Mobile.css" rel="stylesheet" media="screen and (max-device-width: 480px)">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+	<meta name="description" content="Beyond the Arts is prepared to showcase your artwork and crafts.>
+	<script src="modernizr.custom.05819.js"></script>
+</head>
+<body>
+
+
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-content" style="max-width:1500px">
+<!-- Header -->
+  <header class="w3-container w3-xlarge w3-padding-24">
+   <!--<a href="#" class="w3-left w3-button w3-blue">MY ART</a>
+    <a href="#about" class="w3-right w3-button w3-blue">About</a>-->
+  </header>
+
+  <!-- Photo Grid -->
+  <div class="w3-row">
+    <div class="w3-half">
+      <!--<img src="graffiti.jpg" style="width:80">
+      <img src="street.jpg" style="width:80">
+      <img src="joker.jpg" style="width:80">-->
+    </div>
+
+    <div class="w3-half">
+      
+    </div>
+  </div>
+  
+<!-- End Page Content -->
+</div>
+
+	<div id="wrapper">
+		<header>
+			<h1>Beyond the Arts </h1>
+		</header>
+		
+	    <nav>
+<div class="btn-group" style="width:100%">
+  <button style="width:20%"><a href = "index.htm">Home </a></button>
+  <button style="width:20%"><a href = "art.htm">Art </a></button>
+ <button style="width:20%"><a href = "contact.htm">Contact </a></button>
+  <button style="width:20%"><a href = "cart.htm">Cart</a></button>
+  <button style="width:20%"><a href = "web security.htm">Security</a></button>
+</div>
+
+		</nav>
+		
+		<main>
+		
+		
+
+<article>
+         <h1>Estimate</h1>
+         <p>Our experienced, professional artist team is available to create and paint your vision.</p>
+         <p>Choose the custom options that fit your needs:</p>
+         <form id="estimateform">
+            <fieldset>
+               <legend><span>Art</span></legend>
+			   <div class="card">
+			   <img src="baby drawing.jpg" alt="baby" width="300" height="300">
+			   <div class = "container">
+			   </div>
+</div>
+               <input type="number" min="0" max="4" id="photognum" value="1" />
+               <label for="photognum">
+                  <p>  # of painting (1&#8209;4)</p>
+                  <p>$100/hr</p>
+               </label>
+
+               <input type="number" min="2" id="photoghrs" value="2" />
+               <label for="photoghrs">
+                  <p># of hours to paint (minimum&nbsp;2)</p>
+               </label>
+
+               <input type="checkbox" id="membook" />
+               <label for="membook">
+                  <p>Memory book</p>
+                  <p>$250</p>
+               </label>
+
+               <input type="checkbox" id="reprodrights" />
+               <label for="reprodrights">
+                  <p>Reproduction rights for all photos</p>
+                  <p>$1250</p>
+               </label>
+            </fieldset>
+            <fieldset>
+               <legend><span>Travel</span></legend>
+               <input type="number" id="distance" value="0" />
+               <label for="distance">
+                  <p>Event distance from Evansville, IN</p>
+                  <p>$1/mi per artist</p>
+               </label>
+            </fieldset>
+         </form>
+      </article>
+      <aside>
+         <p>Total Estimate: <span id="estimate"></span></p>
+      </aside>
+      <footer>
+         <p>Beyond the Arts &bull; </p>
+      </footer>
+   </div>
+   <script>
+   var photographerCost = 0; 
+var totalCost = 0;
+
+var memoryBook = false; 
+var reproductionRights = false;
+
+
+function toggleMembook( ) {
+
+	totalCost += 
+((document.getElementById("membook").checked === false) ? -250 : 250);
+document.getElementById("estimate").innerHTML = "$" + totalCost;
+	
+	
+}
+
+function toggleRights() {
+	
+totalCost = 
+(document.getElementById("reprodrights").checked === false) ? -1250 : 1250;
+document.getElementById("estimate").innerHTML = "$" + totalCost;
+}
+
+function calcStaff( )
+{
+	
+	var num = document.getElementById("photognum"); 
+	var hrs = document.getElementById("photoghrs");	
+	var distance = document.getElementById( "distance" );	
+	
+	totalCost -= photographerCost; //clear out previous cost
+	photographerCost = num.value*100*hrs.value + distance.value*num.value;
+	//alert( "inside calcStaff" + photographerCost + ", " + distance.value );
+	totalCost += photographerCost;
+	
+	document.getElementById( "estimate" ).innerHTML = "$" + totalCost;
+}
+
+
+function resetForm() { 
+           	 document.getElementById("photognum").value = 1; 
+           	 document.getElementById("photoghrs").value = 2; 
+           	 document.getElementById("membook").checked = memoryBook; 
+			 document.getElementById("reprodrights").checked = reproductionRights;
+             document.getElementById("distance").value = 0;
+			 calcStaff( );
+			}
+
+document.getElementById("photognum"). addEventListener("change", calcStaff, false ); 
+document.getElementById("photoghrs"). addEventListener("change", calcStaff, false );
+ document.addEventListener("load", resetForm, false);
+document.getElementById("membook"). addEventListener("change", toggleMembook, false); 
+document.getElementById("reprodrights"). addEventListener("change", toggleRights, false);
+document.getElementById("distance"). addEventListener("change", calcStaff, false);
+</script>
+
+		</main>
+		
+		<footer >
+		
+<footer class="w3-light-grey w3-padding-64 w3-center" id="about">
+  
+  
+ 
+  
+
+
+<button class="open-button" onclick="openForm()">Chat</button>
+
+<div class="chat-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>Chat</h1>
+
+    <label for="msg"><b>Message</b></label>
+    <textarea placeholder="Type message.." name="msg" required></textarea>
+
+    <button type="submit" class="btn">Send</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+				
+				Copyright &copy; 2020 Beyond the Arts<br>
+				<a href="mailto:earlscavella@gmail.com"> earlscavella@gmail.com</a>
+				
+		</footer>
+
+	</div>
+	
+
+   
+</body>
+</html>

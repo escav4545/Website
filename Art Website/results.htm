@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Beyond the Arts</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="Styles.css">
+	<link href="Mobile.css" rel="stylesheet" media="screen and (max-device-width: 480px)">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+	<meta name="description" content="Beyond the Arts is prepared to showcase your artwork and crafts.>
+	<script src="modernizr.custom.65897.js"></script>
+	
+</head>
+<body>
+
+
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-content" style="max-width:1500px">
+<!-- Header -->
+  <header class="w3-container w3-xlarge w3-padding-24">
+   <!--<a href="#" class="w3-left w3-button w3-blue">MY ART</a>
+    <a href="#about" class="w3-right w3-button w3-blue">About</a>-->
+  </header>
+
+  <!-- Photo Grid -->
+  <div class="w3-row">
+    <div class="w3-half">
+      <!--<img src="graffiti.jpg" style="width:80">
+      <img src="street.jpg" style="width:80">
+      <img src="joker.jpg" style="width:80">-->
+    </div>
+
+    <div class="w3-half">
+      
+    </div>
+  </div>
+  
+<!-- End Page Content -->
+</div>
+
+	<div id="wrapper">
+		<header>
+			<h1>Beyond the Arts </h1>
+		</header>
+	    <nav>
+<div class="btn-group" style="width:100%">
+  <button style="width:20%"><a href = "index.html">Home </a></button>
+  <button style="width:20%"><a href = "art.html">Art </a></button>
+ <button style="width:20%"><a href = "contact.htm">Contact </a></button>
+  <button style="width:20%"><a href = "cart.htm">Cart</a></button>
+  <button style="width:20%"><a href = "web security.htm">Security</a></button>
+</div>
+
+		</nav>
+		
+		<main>
+		
+ <article>
+      <h2>Your form has been submitted</h2>
+      <div class="results">
+         <h3>You entered the following data:</h3>
+   
+         <script>
+             var formData = location.search;
+             formData = formData.substring(1, formData.length);
+             while (formData.indexOf("+") !== -1) {
+                formData = formData.replace("+", " ");
+             }
+             formData = decodeURIComponent(formData);
+             var formArray = formData.split("&");
+             for (var i = 0; i < formArray.length; i = i + 1) {
+                document.write("<p>" + formArray[i] + "</p>");
+             }
+         </script>
+      </div>
+   </article>
+		</main>
+		
+		<footer >
+	
+		<!-- Footer / About Section -->
+<footer class="w3-light-grey w3-padding-64 w3-center" id="about">
+  
+  
+ 
+  
+
+
+
+
+				
+				Copyright &copy; 2020 Beyond the Arts<br>
+				<a href="mailto:earlscavella@gmail.com"> earlscavella@gmail.com</a>
+				
+		</footer>
+
+	</div>
+	
+
+</body>
+</html>

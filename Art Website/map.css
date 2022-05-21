@@ -1,0 +1,144 @@
+nav ul li:first-of-type {
+   border-right: 2px solid #BBBBBB;
+}
+
+/* article */
+article {
+   background: #F0EAD6;
+   padding: 10px 0;
+   overflow: auto;
+}
+
+#location {
+   min-height: 500px;
+   padding: 0 20px;
+   display: none;
+}
+
+#map {
+   width: 100%;
+   min-height: 300px;
+}
+
+#directions {
+   width: 100%;
+   height: 100%;
+}
+
+#room {
+   width: 470px;
+   height: 150px;
+   background: black;
+   color: white;
+   text-align: center;
+   margin: 0 auto;
+   position: relative;
+   padding-top: 5px;
+   font-family: Aladin, cursive;
+   font-size: 1.2em;
+}
+
+#stage, #table1, #table2, #table3, #table4 {
+   position: absolute;
+   color: white;
+   background: #5B291B;
+   text-align: center;
+   font-size: 0.8em;
+   padding-top: 1em;
+   border: 3px solid #666666;
+   font-family: Georgia, "Droid Serif", serif; 
+   cursor: default;
+}
+
+#stage {
+   width: 60px;
+   height: 120px;
+   left: 5px;
+   top: 15px;
+}
+
+#table1, #table2, #table3, #table4 {
+   width: 60px;
+   height: 60px;
+   top: 45px;
+}
+
+#table1 {
+   left: 130px;
+}
+
+#table2 {
+   left: 195px;
+}
+
+#table3 {
+   left: 260px;
+}
+
+#table4 {
+   left: 325px;
+}
+
+/* footer */
+footer {
+   width: 100%;
+   text-align: center;
+   padding: 0.3em;
+   background: #BBBBBB;
+   color: #5B291B;
+   clear: both;
+}
+
+@media all and (max-width: 480px) {
+   header {
+      font-size: 48px;
+   }
+   
+   header h1 {
+      float: none;
+      text-align: center;
+      padding: 0;
+   }
+   
+   header p {
+      display: none;
+   }
+   
+   #setup {
+      font-size: 0.75em;
+   }
+
+   #room {
+      width: 310px;
+      height: 96px;
+   }
+      
+   #stage {
+      width: 38px;
+      height: 72px;
+      left: 4px;
+      top: 20px;
+   }
+   
+   #table1, #table2, #table3, #table4 {
+      width: 38px;
+      height: 38px;
+      top: 29px;
+   }
+   
+   #table1 {
+      left: 83px;
+   }
+   
+   #table2 {
+      left: 125px;
+   }
+   
+   #table3 {
+      left: 167px;
+   }
+   
+   #table4 {
+      left: 209px;
+   }
+}
